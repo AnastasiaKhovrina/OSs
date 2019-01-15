@@ -27,7 +27,7 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
           <con:entry key="filter" value="noFilter"/>
-          <con:entry key="select" value=""/>
+          <con:entry key="select" value="no"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>filter</con:entry>
