@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="9b0cdb41-55a6-4595-a0e7-9657a0033ca7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://httpbin.org TestCase" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9b0cdb41-55a6-4595-a0e7-9657a0033ca7fileName">http%3A%2F%2Fhttpbin.org-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="Request 1" id="712cd7f7-2087-4ab9-880f-ac2794608900">
+    <con:settings/>
+    <con:config service="http://httpbin.org" resourcePath="/get" methodName="Method GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="bda053f1-74b5-4479-bb67-7ddbe1084fc6" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://httpbin.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://httpbin.org/get</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f80815b5-cd59-4a2c-b87f-5c7e8b9d2496" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="filter" value=""/>
+          <con:entry key="select" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>filter</con:entry>
+          <con:entry>select</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>712cd7f7-2087-4ab9-880f-ac2794608900</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

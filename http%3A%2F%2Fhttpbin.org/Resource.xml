@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Resource" path="/get" id="90b32c45-e140-49cb-a5ec-8d399c32f04f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="90b32c45-e140-49cb-a5ec-8d399c32f04ffileName">Resource</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method GET" id="cadb2bda-5382-4478-a590-61f38a30c93f" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>filter</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>select</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:get="http://httpbin.org/get">get:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="bda053f1-74b5-4479-bb67-7ddbe1084fc6" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://httpbin.org/get</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="filter" value="456"/>
+        <con:entry key="select" value="123"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>filter</con:entry>
+        <con:entry>select</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 2" id="0f2afcb1-69fc-44cc-8f9d-523a654ce49c" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://httpbin.org/get</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="filter" value="452"/>
+        <con:entry key="select" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>filter</con:entry>
+        <con:entry>select</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
