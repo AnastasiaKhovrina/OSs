@@ -4,23 +4,6 @@
     <con:setting id="9b0cdb41-55a6-4595-a0e7-9657a0033ca7fileName">http%3A%2F%2Fhttpbin.org-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datasource" name="DataSource" id="d05e78c4-3512-4b69-b8f0-98bb887b98ee">
-    <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Grid">
-        <con:configuration>
-          <check>&lt;xml-fragment/></check>
-          <recognizeAsPlainText>true</recognizeAsPlainText>
-        </con:configuration>
-      </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
-      <con:property>filter</con:property>
-      <con:property>select</con:property>
-      <con:completeLastOperation>true</con:completeLastOperation>
-      <con:restartOnRun>true</con:restartOnRun>
-    </con:config>
-  </con:testStep>
   <con:testStep type="restrequest" name="Request 1" id="712cd7f7-2087-4ab9-880f-ac2794608900">
     <con:settings/>
     <con:config service="http://httpbin.org" resourcePath="/get" methodName="Method GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -43,22 +26,14 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="filter" value="${DataSource#filter}"/>
-          <con:entry key="select" value="${DataSource#select}"/>
+          <con:entry key="filter" value="FilterEquals"/>
+          <con:entry key="select" value="no"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>filter</con:entry>
           <con:entry>select</con:entry>
         </con:parameterOrder>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="f41f20da-09c8-42cb-8b9e-4f459c2c4927">
-    <con:settings/>
-    <con:config>
-      <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Request 1</targetStep>
-      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
