@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7ebdc726-5bc1-4cbc-9af8-2497de5f4b0e" created="2.5.0" activeEnvironment="Default environment" name="TEST - httpbin.org" resourceRoot="" updated="2.5.0" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7ebdc726-5bc1-4cbc-9af8-2497de5f4b0e" created="2.5.0" activeEnvironment="Default environment" name="TEST - httpbin.org" resourceRoot="" updated="2.8.2" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7ebdc726-5bc1-4cbc-9af8-2497de5f4b0efileName">TEST---httpbin.org</con:setting>
   </con:settings>
@@ -7,9 +7,29 @@
     <con:vcsName>Git</con:vcsName>
     <con:repositoryIdentifier>https://github.com/AnastasiaKhovrina/OSs.git</con:repositoryIdentifier>
   </con:vcsConfiguration>
+  <con:apis id="be39f184-3b42-40a4-ac1a-17ee69b7279e" name="APIs">
+    <con:settings/>
+  </con:apis>
+  <con:functionalTests id="599b9c0c-dce7-46e9-8e1a-1c9057dad918" name="Functional &amp; Security Tests">
+    <con:settings/>
+  </con:functionalTests>
+  <con:securityTests id="f80e585c-3ff5-43c1-817c-6691c26f0a8f" name="Security Tests">
+    <con:settings/>
+  </con:securityTests>
+  <con:mockServices id="d453692a-80d4-4386-b377-a9e6a89c6fe3" name="Virtual Services">
+    <con:settings/>
+  </con:mockServices>
+  <con:loadUITests id="26b4ddc4-c054-4bc2-a8e6-44d472bb257e" name="Load Tests">
+    <con:settings/>
+  </con:loadUITests>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>ForDataSource</con:name>
+      <con:value>new value</con:value>
+    </con:property>
+  </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
